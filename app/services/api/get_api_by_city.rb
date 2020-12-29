@@ -14,7 +14,7 @@ class Api::GetApiByCity
       'Content-Type': 'application/vnd.api+json',
       'accept': 'application/vnd.api+json',
       'Accept-Search-Filters': 'yes',
-      'Authorization': 'Token eyJhbGciOiJIUzI1NiJ9.eyJyZXNlbGxlcl9lbWFpbCI6ImFwYWRpbGxhK3BydWViYWRldkB0dXJpc21vaS5jb20ifQ.ICmqJen12eyoyNfKlMoSkZG5yffULVVNBalbqztFxoU'
+      'Authorization': Rails.application.credentials.api_token
     }
     response = HTTP.headers(headers).get(uri)
     JSON.parse(response.to_s)
