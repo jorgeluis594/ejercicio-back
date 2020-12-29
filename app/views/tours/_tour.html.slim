@@ -1,0 +1,18 @@
+.card
+  .card__image-container style="background-image: url('#{tour[:photo]}')"
+  .card__body
+    .card__body-title
+      h2
+        = tour[:name]
+    .card__body-content
+      h3.subtitle Actividades
+      p.text
+        = tour[:activities].join(', ')
+    .card__footer
+      .card__footer-left
+        span.text
+          = tour[:hours] ? "#{tour[:hours]} horas" : "#{tour[:days]} días"
+      .card__footer-right
+        h3.subtitle Desde
+        span.price
+          = "S/#{tour[:price]}"

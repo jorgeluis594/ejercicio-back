@@ -1,2 +1,3 @@
-h1 Tours#index
-p Find me in app/views/tours/index.html.slim
+.container
+  - @tours.each do |tour|
+    = render partial: 'tours/tour', locals: {tour: tour}
