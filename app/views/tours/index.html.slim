@@ -1,4 +1,7 @@
-
+form.search action="/"
+  .search-container
+    input.search name="city"
+    button.send   &#x1F50E;
 .container
   - @tours.each do |tour|
     = render partial: 'tours/tour', locals: {tour: tour}

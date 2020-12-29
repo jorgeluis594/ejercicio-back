@@ -2,7 +2,7 @@ require 'http'
 
 class Api::GetApiByCity
   def call(city)
-    data = get_data(city)
+    data = get_data(city.gsub(' ', ''))
     create_hash_by_tour(format_data(data))
   end
 
